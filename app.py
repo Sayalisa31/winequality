@@ -39,9 +39,9 @@ def predict():
 
         output = prediction
         if output >= 5:
-            return render_template('result.html', prediction_text="Wine quality is HIGH")
+            return render_template('result.html', prediction_text="Wine quality is GOOd")
         else:
-            return render_template('result.html', prediction_text="Wine quality is LOW")
+            return render_template('result.html', prediction_text="Wine quality is BAD")
 
 
 
