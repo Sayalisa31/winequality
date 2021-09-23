@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine Quality</title>
+</head>
+<style>
+      body {
+        background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/99/82/iC0T8U.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+
+      }
+    </style>
+
+<body>
+
+<form action="{{url_for('predict')}}" METHOD="post">
+    <center><style>
+input[type=text] {
+  width: 20%;
+  box-sizing: border-box;
+  border: 0.2px solid #ccc;
+  border-radius: 2px;
+  font-size: 16px;
+  background-color: Wheat;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding: 10px 18px 10px 38px;
+}
+</style></center>
+<body>
+
+
+     <br><br><h1 style="color:Wheat;"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWine Quality</h1><br><br>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='fixed_acidity' placeholder="Fixed_acidity" required="required">
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='volatile_acidity' placeholder="Volatile_acidity" required="required"><br><br>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='citric_acid' placeholder="Citric_acid" required="required">
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='residual_sugar' placeholder="Residual_sugar" required="required"><br><br>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='chlorides' placeholder="Chlorides" required="required">
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='free_sulphur_dioxide' placeholder="Free_sulphur_dioxide" required="required"><br><br>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='total_sulphur_dioxide' placeholder="Total_sulphur_dioxide" required="required">
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name='density' placeholder="Density" required="required"><br><br>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='ph' placeholder="pH" required="required">
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='sulphates' placeholder="Sulphates" required="required"><br><br>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="text" name='alcohol' placeholder="Alcohol" required="required"><br><br>
+    <br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button id="sub" type="submit">Calculate the Wine Quality</button>
+     <br>
+    <h1 style="color:Wheat";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPredicted Result</h1>
+     <h1 style="color:Wheat";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{prediction_text}}</h1>
+
+</form>
+</body>
+</html>
